@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 12pt;
+}
+
+body {
+    background: rgb(60 64 67);
+    color: #EEE;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 20pt;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+header,
+form {
+    font-size: 12pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+    margin: 1rem 0;
+    /* width: 500px; */
+}
+
+.input {
+    background-color: rgba(255, 255, 255, 0.8);
+    min-height: 2.5rem;
+    padding: 4.7pt;
+    margin-bottom: 2rem;
+    /* min-width: 45%; */
+}
+
+.text {
+    min-width: 42%;
+}
+
+input {
+    width: 95%;
+    background: none;
+    border: none;
+    outline: none;
+    vertical-align: middle;
+}
+
+.button {
+    background-color: #41666c;
+    padding: 7px 0px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.submit:hover {
+    filter: brightness(1.2);
+}
+
+.inputText {
+    font-size: 18pt;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.input i {
+    height: 15px;
+    width: 40px;
+    cursor: pointer;
+    vertical-align: middle;
+    color: black;
+    padding: 0px;
+    /* font-size: 18pt; */
+    /* margin:  -5px; */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list {
+    min-width: 45%;
+    list-style: none;
+    margin: 0 9px;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin: 9px 0px;
+    font-size: 1.5rem;
+    background: grey;
+    /* margin: 0.5rem; */
+    /* padding: 1rem; */
+    transition: all 0.5s ease;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.check,
+.delete {
+    padding: 0.2rem;
+    margin: 9px 0px;
+    cursor: pointer;
+    border: none;
+    margin: 0.1rem;
+    padding: 0.5rem;
+    background: rgba(60, 64, 67, 0.7);
+    /* font-size: 18pt; */
+}
+
+.check {
+    color: green;
+}
+
+.delete {
+    color: red;
+}
+
+.todo-item {
+    display: flex;
+    /* justify-content: start; */
+    align-items: center;
+    padding: 0rem 0.5rem;
+    vertical-align: middle;
+    font-size: 15pt;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.fa-trash-alt, .fa-check{
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(7rem) rotateY(21deg);
+    opacity: 0;
+}

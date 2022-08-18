@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./font-awesome/FontAwesome Documentation/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body onload="init()">
+
+    <header>
+        <h1>Welcome to Todo List</h1>
+    </header>
+
+    <form name="form">
+        <div class="input text">
+            <input type="text" name="input" class="inputText">
+        </div>
+
+        <div class="input button" onclick="document.form.submit()">
+            <i class="far fa-calendar-plus"></i>
+        </div>
+    </form>
+
+    <div class="container">
+        <ul class="list"></ul>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
