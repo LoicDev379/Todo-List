@@ -27,6 +27,10 @@ form {
     /* width: 500px; */
 }
 
+form {
+    margin: auto 5%;
+}
+
 .input {
     background-color: rgba(255, 255, 255, 0.8);
     min-height: 2.5rem;
@@ -36,7 +40,7 @@ form {
 }
 
 .text {
-    min-width: 42%;
+    min-width: 30vw;
 }
 
 input {
@@ -52,6 +56,7 @@ input {
     padding: 7px 0px;
     cursor: pointer;
     text-align: center;
+    border: none;
 }
 
 .submit:hover {
@@ -74,6 +79,29 @@ input {
     /* margin:  -5px; */
 }
 
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    box-shadow: none;
+    border: none;
+
+    background: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 2%;
+    text-align: center;
+    color: #41666c;
+}
+
+.select {
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -81,7 +109,7 @@ input {
 }
 
 .list {
-    min-width: 45%;
+    min-width: 50vw;
     list-style: none;
     margin: 0 9px;
 }
@@ -132,7 +160,8 @@ input {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.fa-trash-alt, .fa-check{
+.fa-trash-alt,
+.fa-check {
     pointer-events: none;
 }
 
@@ -144,4 +173,17 @@ input {
 .fall {
     transform: translateY(7rem) rotateY(21deg);
     opacity: 0;
+}
+
+@media screen and (max-width:500px) {
+    form {
+        /* display: block; */
+        margin: 0 5%;
+        min-width: 10rem;
+    }
+    .list {
+        min-width: 85vw;
+        list-style: none;
+        margin: 0 9px;
+    }
 }

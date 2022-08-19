@@ -8,9 +8,10 @@
     <title>Todo List</title>
     <link rel="stylesheet" href="./font-awesome/FontAwesome Documentation/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
 </head>
 
-<body onload="init()">
+<body>
 
     <header>
         <h1>Welcome to Todo List</h1>
@@ -18,11 +19,20 @@
 
     <form name="form">
         <div class="input text">
-            <input type="text" name="input" class="inputText">
+            <input type="text" autocomplete="none" name="input" class="inputText">
         </div>
 
-        <div class="input button" onclick="document.form.submit()">
+        <button class="input button">
             <i class="far fa-calendar-plus"></i>
+        </button>
+        &nbsp;&nbsp;&nbsp;
+
+        <div class="input select">
+            <select name="todos" class="todos-select">
+                <option value="all">Toutes les tâches</option>
+                <option value="realised">Tâches realisées</option>
+                <option value="not-realised">Tâches non realisées</option>
+            </select>
         </div>
     </form>
 
@@ -30,7 +40,6 @@
         <ul class="list"></ul>
     </div>
 
-    <script src="./script.js"></script>
 </body>
 
 </html>
