@@ -43,6 +43,12 @@ function addTodoList(e) {
         checkButton.classList.add("check");
         DIV.appendChild(checkButton);
 
+        // Edit button
+        const editButton = document.createElement("button");
+        editButton.innerHTML = `<i class="far fa-edit"></i>`;
+        editButton.classList.add("edit");
+        DIV.appendChild(editButton);
+
         // Delete botton
         const deleteButton = document.createElement("button");
         deleteButton.innerHTML = `<i class="far fa-trash-alt"></i>`;
@@ -62,6 +68,21 @@ function deleteCheck(e) {
     e.stopImmediatePropagation();
     const item = e.target;
 
+    if (item.classList[0] === "check") {
+        item.parentElement.classList.toggle("completed");
+    }
+
+    if (item.classList[0] === "edit") {
+        const todo = item.parentElement.children[0].innerText;
+        inputText.value = todo;
+        btn.onclick = (e) => {
+            e.preventDefault();
+            removeTodo(item.parentElement);
+            item.parentElement.children[0].innerText = inputText.value;
+            document.location.reload();
+        }
+    }
+
     if (item.classList[0] === "delete") {
         const todo = item.parentElement;
         todo.classList.add("fall");
@@ -69,9 +90,6 @@ function deleteCheck(e) {
         todo.addEventListener("transitionend", () => {
             todo.remove();
         })
-    }
-    if (item.classList[0] === "check") {
-        item.parentElement.classList.toggle("completed");
     }
 }
 
@@ -105,17 +123,6 @@ function selectTodo(e) {
         }
     });
 }
-
-function initTodosArray() {
-    let todos;
-    if (localStorage.getItem("todos") == null) {
-        todos = [];
-    } else {
-        todos = JSON.parse(localStorage.getItem("todos"));
-    }
-    return todos;
-}
-console.log(initTodosArray());
 
 function saveTodo(todo) {
     let todos;
@@ -152,6 +159,12 @@ function getTodos() {
         checkButton.innerHTML = `<i class="fas fa-check"></i>`;
         checkButton.classList.add("check");
         DIV.appendChild(checkButton);
+
+        // Edit button
+        const editButton = document.createElement("button");
+        editButton.innerHTML = `<i class="far fa-edit"></i>`;
+        editButton.classList.add("edit");
+        DIV.appendChild(editButton);
 
         // Delete botton
         const deleteButton = document.createElement("button");

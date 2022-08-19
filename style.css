@@ -131,7 +131,8 @@ select {
 }
 
 .check,
-.delete {
+.delete,
+.edit {
     padding: 0.2rem;
     margin: 9px 0px;
     cursor: pointer;
@@ -143,6 +144,10 @@ select {
 }
 
 .check {
+    color: blue;
+}
+
+.edit {
     color: green;
 }
 
@@ -160,8 +165,9 @@ select {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.fa-trash-alt,
-.fa-check {
+.fa-check,
+.fa-edit,
+.fa-trash-alt {
     pointer-events: none;
 }
 
@@ -181,6 +187,7 @@ select {
         margin: 0 5%;
         min-width: 10rem;
     }
+
     .list {
         min-width: 85vw;
         list-style: none;
